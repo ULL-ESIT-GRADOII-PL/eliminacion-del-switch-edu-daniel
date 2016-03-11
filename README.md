@@ -10,7 +10,7 @@ Este repositorio aloja la práctica de conversión de tipos, realizada con html,
 
 **Repositorio GitHuB**
 
-* [Repositorio](https://github.com/alu0100825985/object-oriented-programming-in-js-edda.git)
+* [Repositorio](https://github.com/alu0100825985/eliminacion-del-switch-edu-daniel.git)
 
 **Página de la práctica**
 

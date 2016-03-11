@@ -1,6 +1,6 @@
-# Práctica OOP en JS
+# Eliminación del Switch Smell
 
-Este repositorio aloja la práctica de conversión de tipos, realizada con html, css y javascript, usando POO y haciendo uso de la herencia en javascript.
+Este repositorio aloja la práctica Switch Smell
 
 ##### Realizada por Daniel Antonio Fernández Pérez y Eduardo Escobar Alberto (Equipo Edda)
 
@@ -10,11 +10,11 @@ Este repositorio aloja la práctica de conversión de tipos, realizada con html,
 
 **Repositorio GitHuB**
 
-* [Repositorio](https://github.com/alu0100825985/eliminacion-del-switch-edu-daniel.git)
+* [Repositorio](https://github.com/ULL-ESIT-GRADOII-PL/eliminacion-del-switch-edu-daniel)
 
 **Página de la práctica**
 
-* [Web]()
+* [Web](http://ull-esit-gradoii-pl.github.io/eliminacion-del-switch-edu-daniel/)
 
 **Páginas Personales de los Autores**
 

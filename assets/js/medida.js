@@ -1,10 +1,13 @@
 function Medida (valor,tipo)
 {
-    var regexp = /^\s*([-+]?\d+(?:\.\d*)?(?:e[-+]?\d+)?)\s*([a-zA-Z])\s*$/i;
-    var val = regexp.exec(valor);
-    if (val) {
-      this.valor = val[1];
-      this.tipo = val[2];
+  var reg_exp = XRegExp('^(?<valor_re> [+-]?\\d+(\\.\\d+)?([e][+-]?\\d+)?[ ]*) # valor \n' +
+                        '(?<tipo_re> [a-zA-Z]+)                                # tipo  \n'
+                        , 'xi');
+
+  var exp_result = XRegExp.exec(valor, reg_exp);
+    if (exp_result) {
+      this.valor = parseFloat(exp_result[1]);
+      this.tipo = exp_result[2];
     } else {
       this.valor = valor;
       this.tipo = tipo;
@@ -46,17 +49,10 @@ Medida.convertir = function(valor) {
         numero = parseFloat(numero);
         console.log("Valor: " + numero + ", 1º Tipo: " + tipo_from + ", 2º Tipo: " + tipo_to);
 
-    
-        try {
-          var source = new measures[tipo_from](numero);                  // new Fahrenheit(32)
-          var target = "to"+measures[tipo_to].name;                 // "toCelsius"
-          return source[target]().toFixed(2) + " "+measures[tipo_to].name;          // "0 Celsius"
-        }
-        catch(err) {
-          console.log(err);
-          return 'Desconozco como convertir desde "'+tipo_from+'" hasta "'+destino_to+'"';
-        }
+          var source = new measures[tipo_from](numero);
+          var target = "to"+measures[tipo_to].name;
+          return source[target]().toFixed(2) + " "+measures[tipo_to].name;
       }
       else
-        return "Introduzca una temperatura valida: 330e-1 F to C";
+        return "ERROR! Try something like '4F to K or 50e1K C or 30C TO K' instead";
     };
